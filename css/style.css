@@ -68,7 +68,6 @@ code {
   font-family: 'Courier New'; }
 
 section {
-  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   background-size: cover;
   background-repeat: no-repeat;
@@ -77,10 +76,8 @@ section {
     position: relative;
     top: 80%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     opacity: 0;
-    -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
     padding: 30px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -133,4 +130,43 @@ footer {
   position: relative;
   width: 100%; }
 
+.stacked-dots {
+  position: fixed;
+  z-index: 305;
+  width: 68%;
+  margin: 0 16%;
+  display: flex;
+  justify-content: space-between; }
+
+.stacked-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #D6D6D6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity .2s ease;
+  border-radius: 30px; }
+
+button.stacked-dot {
+  background: 0 0;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+button.stacked-dot.active {
+  background-color: transparent !important; }
+
+.stacked-dots .stacked-dot.active span, .stacked-dots .stacked-dot:hover span {
+  background: #869791; }
+
 /* Required Styles End */
+
+/*# sourceMappingURL=style.css.map */
